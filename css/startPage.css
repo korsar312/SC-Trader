@@ -1,0 +1,92 @@
+.startPageStarter{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: 10;
+}
+
+      .startPageflexbox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+      }
+
+            .startPageIcoAndGame{
+                  position: absolute;
+            }
+
+                  .startPageIco{
+                        background-image: url(../sys_img/wel.png);
+                        background-size: cover;
+                        width: 150px;
+                        height: 150px;
+                        margin-top: 5vh;
+                        opacity: 0;
+                        transition:  ease  3s;
+                  }
+
+            .startPageNameProg{
+                  flex: 1;
+                  color: #AAB;
+                  letter-spacing: 35px;
+                  font-size: 30pt;
+                  display: flex;
+                  text-align: center;
+                  align-items: center;
+            }
+                  .starTrader{
+                        transition:  ease 2s;
+                        -moz-user-select: none;
+                        -khtml-user-select: none;
+                        -webkit-user-select: none;
+                        user-select: none;
+                  }
+                  .starTrader6{
+                        letter-spacing: 0 !important;
+                  }
+
+            .startPageStartButton{
+                  position: absolute;
+                  bottom: -10px;
+                  opacity: 0;
+                  transition: ease 3s;
+            }
+                  .scuareInSide{
+                        width: 115px;
+                        height: 115px;
+                        border: thick solid #AAB;
+                        border-radius: 53px;
+                        overflow: hidden;
+                  }
+                        .redScuareInSide{
+                              background: red;
+                              width: 115px;
+                        }
+                              .scuare{
+                                    position: absolute;
+                                    top: 8px;
+                                    left: 8px;
+                                    width: 99px;
+                                    height: 99px;
+                                    border: thick solid #AAB;
+                                    border-radius: 46px;
+                                    background:#ffffff;
+                              }
+
+                                    .scuareText{
+                                          position: absolute;
+                                          font-size: 17pt;
+                                          margin: 35px 0 0 10px;
+                                          color: #878787;
+                                          -khtml-user-select: none;
+                                          -webkit-user-select: none;
+                                          user-select: none;
+                                          transition:  linear 1s;
+                                    }
+                                    .scuareTextFalse{
+                                          color: #433333;
+                                          transition:  linear 1.7s;
+                                    }

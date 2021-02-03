@@ -1,0 +1,30 @@
+body {
+  font-family: serif, arial;
+  background-color: #eeeff2;
+}
+
+
+
+
+.nameTab{
+	margin: 10px;
+	font-size: 25pt;
+	text-align: center;
+}
+
+::-webkit-scrollbar
+{
+  width: 8px;  /* for vertical scrollbars */
+  height: 8px; /* for horizontal scrollbars */
+
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
