@@ -2,93 +2,88 @@ const app = document.getElementById('start')
 let universe
 let itemTrade
 
-{
-/////====================================================
+let start ={
+//------------------------------------------------------------------------------
+      bufer: null,                                                                //костыль невежества :(
+//------------------------------------------------------------------------------
+      removeDOM(all, ...args){                                                  //удаляет внутрянку у id элемента
+            for(arg in args){
+                  let doc = document.getElementById(args[arg])
+                  if (all){
+                        setTimeout(() => {doc.remove(); }, 300);
+                        doc.style.opacity = '0'
+                  }
+                  else{
+                        s()
+                        function s(){
+                               if(doc.firstChild){
+                                     doc.firstChild.remove(); s();
+                               }
+                        }
+                  }
+            }
+      },
+//------------------------------------------------------------------------------
+      renderPageName(namePage){                                                 //div с имянем
+            let name = document.createElement('div')
+            name.className = 'name'
+            name.innerHTML = `<div id='namePage'>${namePage}</div><div id='content'></div>`
+            app.append(name)
+      },
+//------------------------------------------------------------------------------
+      getParrentItemTrade(locat,transact){				              //функция для получения массива товаров родителям от детей (потом нужна будет и не тут)
+            if(!universe[locat].transact && universe[locat].child){
+                 return getParrentItemTrade(universe[locat].child,transact)
+            }
+            else {return universe[locat][transact]}
+      },
+//------------------------------------------------------------------------------
+      loadObject(src) {                                                         //получения объектов с сервера
+            return new Promise(function(resolve, reject) {
+                  const xhr = new XMLHttpRequest()
+                  xhr.open('GET', src)
+                  xhr.responseType = 'json'
+                  xhr.onload = ()=>{
+                        if(xhr.status >= 400){reject(xhr.response)}
+                        else{
+                              resolve(this.bufer = xhr.response)
+                        }
+                  }
+                  xhr.onerror = ()=>{reject(xhr.response)}
+                  xhr.send()
+            });
+      },
+//------------------------------------------------------------------------------
+      loadScript(src) {                                                         //подгрузка скриптов
+            return new Promise(function(resolve, reject) {
+                  let script = document.createElement('script');
+                  script.src = src;
+                  script.onload = () => resolve(script);
+                  script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
+                  document.head.append(script);
+            });
+      },
+//------------------------------------------------------------------------------
+      setTableServer(n, url){                                                   //закидываем на серв (доработать)
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", url, true);
+            xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xmlhttp.send(JSON.stringify(n));
+      }
+//------------------------------------------------------------------------------
+}
 
-let bufer
-                                                                   //костыль невежества :(
-let iHateIE = document.getElementById(`ie`)
-iHateIE.remove()
-
+document.getElementById(`ie`).remove()
 
 /*        //включу и удалю то, что ниже как только разберусь с сервом
 
-loadObject("http://127.0.0.1:3000")
-      .then(function() {universe = bufer})
-      .then(function() {return loadObject("http://127.0.0.1:3001")})
-      .then(function() {itemTrade = bufer})
-      .then(function() {return  loadScript('js/TradeTablePage.js')})
-
+start.loadObject("http://127.0.0.1:3000")
+      .then(function() {universe = start.bufer})
+      .then(function() {return start.loadObject("http://127.0.0.1:3001")})
+      .then(function() {itemTrade = start.bufer})
+      .then(function() {return  start.loadScript('js/mainPage.js')})
+      .then(function() {return  start.loadScript('js/TradeTablePage.js')})
 */
-
-/////====================================================
-}
-
-function removeDOM(all, ...args){                                                    //удаляет внутрянку у id элемента
-      for(arg in args){
-            let doc = document.getElementById(args[arg])
-            if (all){
-                  setTimeout(() => {doc.remove(); }, 300);
-                  doc.style.opacity = '0'
-            }
-            else{
-                  s()
-                  function s(){
-                         if(doc.firstChild){
-                               doc.firstChild.remove(); s();
-                         }
-                  }
-            }
-      }
-}
-
-function renderPageName(namePage){                                                //div с имянем
-      let name = document.createElement('div')
-      name.className = 'name'
-      name.innerHTML = `<div id='namePage'>${namePage}</div><div id='content'></div>`
-      app.append(name)
-}
-
-function getParrentItemTrade(locat,transact){							//функция для получения массива товаров родителям от детей (потом нужна будет и не тут)
-      if(!universe[locat].transact && universe[locat].child){
-           return getParrentItemTrade(universe[locat].child,transact)
-      }
-      else {return universe[locat][transact]}
-}
-
-function loadObject(src) {                                                          //получения объектов с сервера
-  return new Promise(function(resolve, reject) {
-       const xhr = new XMLHttpRequest()
-       xhr.open('GET', src)
-       xhr.responseType = 'json'
-       xhr.onload = ()=>{
-             if(xhr.status >= 400){reject(xhr.response)}
-             else{
-                   resolve(bufer = xhr.response)
-                   }
-       }
-       xhr.onerror = ()=>{reject(xhr.response)}
-       xhr.send()
-
-  });
-}
-
-function loadScript(src) {                                                          //подгрузка скриптов
-  return new Promise(function(resolve, reject) {
-    let script = document.createElement('script');
-    script.src = src;
-    script.onload = () => resolve(script);
-    script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
-    document.head.append(script);
-  });
-}
-
-function setTableServer(n, url){
-      let xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("POST", url, true);
-      xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xmlhttp.send(JSON.stringify(n));
-}
 
 
 universe = {
@@ -1933,4 +1928,5 @@ itemTrade = {
 		}
 	},
 }                                                                     //удалить как только разберусь с сервом
-loadScript('js/TradeTablePage.js')                                                  //удалить как только разберусь с сервом
+start.loadScript('js/TradeTablePage.js')                                            //удалить как только разберусь с сервом
+start.loadScript('js/mainPage.js')                                                //удалить как только разберусь с сервом

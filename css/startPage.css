@@ -1,9 +1,8 @@
 .startPageStarter{
       position: fixed;
+      z-index: 10;
       width: 100%;
       height: 100%;
-      background: #fff;
-      z-index: 10;
 }
 
       .startPageflexbox{
@@ -12,6 +11,8 @@
             align-items: center;
             width: 100%;
             height: 100%;
+            background: #fff;
+            transition:  ease  1s;
       }
 
             .startPageIcoAndGame{
@@ -21,9 +22,9 @@
                   .startPageIco{
                         background-image: url(../sys_img/wel.png);
                         background-size: cover;
-                        width: 150px;
-                        height: 150px;
-                        margin-top: 5vh;
+                        width: 200px;
+                        height: 200px;
+                        margin-top: 10spx;
                         opacity: 0;
                         transition:  ease  3s;
                   }
@@ -57,8 +58,8 @@
                   .scuareInSide{
                         width: 115px;
                         height: 115px;
-                        border: thick solid #AAB;
-                        border-radius: 53px;
+                        border: 3px solid #AAB;
+                        border-radius: 51px;
                         overflow: hidden;
                   }
                         .redScuareInSide{
@@ -67,12 +68,12 @@
                         }
                               .scuare{
                                     position: absolute;
-                                    top: 8px;
-                                    left: 8px;
-                                    width: 99px;
-                                    height: 99px;
-                                    border: thick solid #AAB;
-                                    border-radius: 46px;
+                                    top: 7px;
+                                    left: 7px;
+                                    width: 101px;
+                                    height: 101px;
+                                    border: 3px solid #AAB;
+                                    border-radius: 44px;
                                     background:#ffffff;
                               }
 
