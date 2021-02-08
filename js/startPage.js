@@ -10,7 +10,8 @@ let startPage ={
             mainDiv.id = `startPageStarterID`
             mainDiv.innerHTML = `
                   <div onmousedown="startPage.userZajal('scale(1.8)',1  ,'18px','linear 1s',100,'#424242','не использ','не использ','не использ',true,'115px',1 ,8)"
-                         onmouseup="startPage.userZajal('scale(1)'  ,0.5,'35px','ease-out 0.5s',100,'#AAB','не использ','не использ','не использ',true,'0px'  ,-1,5)" class='startPageflexbox'>
+                       onmouseup="startPage.userZajal('scale(1)'  ,0.5,'35px','ease-out 0.5s',100,'#AAB','не использ','не использ','не использ',true,'0px'  ,-1,5)"
+                       class='startPageflexbox'>
                         <div class='startPageIcoAndGame'>
                               <div class='startPageIco'>
                               </div>
