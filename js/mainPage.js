@@ -29,9 +29,9 @@ let mainPage = {
                                   <div style='margin-left: 0px;' class='mainPage_decorate'>${kartochka}</div>
 
                             </div>`
-            document.body.querySelector('.mainPage_decorate').addEventListener('touchstart',()=>{mainPage.coordinates = event.touches[0].clientX; mainPage.userLeftClick = true})
-            document.body.querySelector('.mainPage_decorate').addEventListener('touchend',()=>{mainPage.userLeftClick = false})
-            document.body.querySelector('.mainPage_decorate').addEventListener('touchmove',()=>{mainPage.shiftKartochka(event.touches[0].clientX)})
+            document.body.querySelector('.mainPage_start').addEventListener('touchstart',()=>{mainPage.coordinates = event.touches[0].clientX; mainPage.userLeftClick = true})
+            document.body.querySelector('.mainPage_start').addEventListener('touchend',()=>{mainPage.userLeftClick = false})
+            document.body.querySelector('.mainPage_start').addEventListener('touchmove',()=>{mainPage.shiftKartochka(event.touches[0].clientX)})
       },
 //------------------------------------------------------------------------------
       shiftKartochka(n){                                                        //я уйму способов перепробывал чтоб это действие заработало из-за (не)работы event.clientX в settimeout`е
@@ -43,8 +43,8 @@ let mainPage = {
                         let shift = parseInt(decorateShift.style.marginLeft) + -((this.coordinates - n)*4) +'px';
                         decorateShift.style.marginLeft = shift
 
-                        if(parseInt(decorateShift.style.marginLeft)>2000){decorateShift.style.marginLeft='2000px'}
-                        else if(parseInt(decorateShift.style.marginLeft)<-2000){decorateShift.style.marginLeft='-2000px'}
+                        if(parseInt(decorateShift.style.marginLeft)>3000){decorateShift.style.marginLeft='3000px'}
+                        else if(parseInt(decorateShift.style.marginLeft)<-3000){decorateShift.style.marginLeft='-3000px'}
 
                         this.coordinates = n;
                         this.tempKostil = true;
