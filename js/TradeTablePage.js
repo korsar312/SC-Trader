@@ -1,14 +1,9 @@
-let tradeTablePage = {
+let tradeTablePage = {                                                          //когда я делал эту страницу, я не спал 2 дня... и пожалуй пусть так и останется так как работает
 //------------------------------------------------------------------------------
-      startTablePage(){
-            start.removeDOM(false, 'start')
+      start(e){                                                                 //создать таблицу товаров
             start.renderPageName('Таблица товаров')
-            this.renderTablePrice('content')
-      },
-//------------------------------------------------------------------------------
-      renderTablePrice(e){                                                      //создать таблицу товаров
             let mapName = new Map()
-            let div = document.getElementById(e)
+            let div = document.getElementById('content')
             let table = document.createElement('table')
             table.className = 'tablePrice'
 
@@ -59,7 +54,7 @@ let tradeTablePage = {
             }
 
             let vert = 0
-            for(key of mapName.keys()){
+            for(key of mapName.keys()){                                         //нужно с этим что-то сделать. Оно грузит очень долго
                   let swit = 0
                   let arr = mapName.get(key)
                   let iterat = ''
@@ -166,7 +161,7 @@ let tradeTablePage = {
                               okey = false
 
                               start.removeDOM(false, 'content')
-                              this.renderTablePrice('content')
+                              this.start('content')
                               start.setTableServer(universe, 'http://127.0.0.1:3002')
                               start.removeDOM(true,'emptyModal','modalChangePrice')
 
@@ -180,7 +175,7 @@ let tradeTablePage = {
                         locat[trade][locat[trade].length-1].push(+tempNumb.value)
 
                         start.removeDOM(false, 'content')
-                        this.renderTablePrice('content')
+                        this.start('content')
                         start.setTableServer(universe, 'http://127.0.0.1:3002')
                         start.removeDOM(true,'emptyModal','modalChangePrice')
                   }
@@ -192,7 +187,7 @@ let tradeTablePage = {
                   locat[trade][locat[trade].length-1].push(+tempNumb.value)
 
                   start.removeDOM(false, 'content')
-                  this.renderTablePrice('content')
+                  this.start('content')
                   start.setTableServer(universe, 'http://127.0.0.1:3002')
                   start.removeDOM(true,'emptyModal','modalChangePrice')
             }

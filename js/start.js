@@ -1,10 +1,12 @@
 const app = document.getElementById('start')
+app.style.opacity = 0
 let universe
 let itemTrade
 
 let start ={
 //------------------------------------------------------------------------------
-      bufer: null,                                                                //костыль невежества :(
+      soManyProblemWithSetTimeout: '',                                          //конфликт со сборщиком мусора и таймаутом
+      bufer: null,                                                              //костыль невежества :(
 //------------------------------------------------------------------------------
       removeDOM(all, ...args){                                                  //удаляет внутрянку у id элемента
             for(arg in args){
@@ -20,6 +22,29 @@ let start ={
                                      doc.firstChild.remove(); s();
                                }
                         }
+                  }
+            }
+      },
+//------------------------------------------------------------------------------
+      startPage(whatPage){
+            start.soManyProblemWithSetTimeout = whatPage
+            s()
+            function s(){
+                  if (app.children.length>0){
+                        app.style.transition = 'ease-out 0.5s'
+                        app.style.opacity = 0
+                        for (let i=0; i<app.children.length; i++){
+                              let it = app.children[i]
+                              setTimeout(()=>{
+                                    it.remove()
+                                    s()
+                              },500)
+                        }
+                  }
+                  else{
+                        let j = start.soManyProblemWithSetTimeout
+                        j.start()
+                        setTimeout(()=>app.style.opacity = 1,10) //Я НЕ ПОНИМАЮ!!!!!!!!!!!!№;"%:%;%;№;"№!"№!"!"ё!№!№" АААААА
                   }
             }
       },
@@ -68,6 +93,7 @@ let start ={
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.open("POST", url, true);
             xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = ()=>{if (xhr.readyState === 4 && xhr.status === 200) {console.log(this.responseText)}}
             xmlhttp.send(JSON.stringify(n));
       }
 //------------------------------------------------------------------------------
@@ -81,8 +107,12 @@ start.loadObject("http://127.0.0.1:3000")
       .then(function() {universe = start.bufer})
       .then(function() {return start.loadObject("http://127.0.0.1:3001")})
       .then(function() {itemTrade = start.bufer})
+      .then(function() {return  start.loadScript('js/.js')})
       .then(function() {return  start.loadScript('js/mainPage.js')})
       .then(function() {return  start.loadScript('js/TradeTablePage.js')})
+      .then(function() {return  start.loadScript('js/filterPage.js')})
+
+      js\.js
 */
 
 
@@ -107,8 +137,8 @@ universe = {
       			description: '',
       			law: '',
       			buy: null,
-      			sell: null,
-      			shop: null,
+                        sell: [['Agricultural Supplies',2],['Aluminum',0.11],['Hydrogen',1.9],['Iodine',0.25],['Quartz',1.58],['Waste',0.001]],
+                        shop: null,
       			image: '',
       		},
             			levski:{
@@ -130,8 +160,8 @@ universe = {
             child: ['arcCorp','crusader','hurston','microTech'],
             description: '',
             law: '',
+            sell: [['Agricultural Supplies',0.5],['Aluminum',1.21],['Hydrogen',0.5],['Iodine',1.35],['Quartz',1.18],['Waste',0.11]],
             buy: null,
-            sell: null,
             shop: null,
             image: '',
       },
@@ -142,7 +172,7 @@ universe = {
                         child: ['ARC_L1','area18','baijini_Point','lyria','wala'],
                         description: '',
                         law: '',
-                        buy: null,
+                        buy: [['Agricultural Supplies',1.5],['Aluminum',0.21],['Hydrogen',1.5],['Iodine',0.35],['Quartz',1.18],['Waste',0.10]],
                         sell: null,
                         shop: null,
                         image: '',
@@ -1432,7 +1462,7 @@ universe = {
                                                 shop: null,
                                                 image: '',
                                           },
-}                                                                      //удалить как только разберусь с сервом
+}                                                                  //удалить как только разберусь с сервом
 itemTrade = {
 	agricium:{
 		name: 'Agricium',
@@ -1927,6 +1957,8 @@ itemTrade = {
 			return arr
 		}
 	},
-}                                                                     //удалить как только разберусь с сервом
+}                                                                 //удалить как только разберусь с сервом
 start.loadScript('js/TradeTablePage.js')                                            //удалить как только разберусь с сервом
-start.loadScript('js/mainPage.js')                                                //удалить как только разберусь с сервом
+start.loadScript('js/filterPage.js')                                            //удалить как только разберусь с сервом
+start.loadScript('js/mainPage.js')                                              //удалить как только разберусь с сервом
+start.loadScript('js/startPage.js')                                             //удалить как только разберусь с сервом

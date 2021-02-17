@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<head>
-	<meta charset="utf-8" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head lang="<?php echo $str_language; ?>" xml:lang="<?php echo $str_language; ?>">
+	<meta name='viewport' content="width=device-width, initial-scale=1"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Star Citizen DB</title>
 	<link type="text/css" rel="stylesheet" href="css/startPage.css"/>
 	<link type="text/css" rel="stylesheet" href="css/header.css"/>
@@ -13,10 +15,6 @@
 </head>
 
 <body>
-	<script type="text/javascript" src="js\startPage.js"></script>
-
-
-
 	<div id='ie' style="font-size: 40pt">Данный сайт не поддерживается на Internet Explorer</div>
 	<header id='header'>
 			<div id='tab'>
@@ -28,9 +26,9 @@
 				</div>
 
 				<div id='workspace' class='info'>
-					<p onclick="tradeTablePage.startTablePage()">Товары в таблице</p>
-					<p>Фильтр маршрута</p>
-					<p>База знаний</p>
+					<p class='workspace_opt' onclick="start.startPage(tradeTablePage)">Товары в таблице</p>
+					<p class='workspace_opt' onclick="start.startPage(filterPage)">Фильтр маршрута</p>
+					<p onclick="start.startPage(mainPage)">Главная</p>
 				</div>
 
 				<div id='search_div'>
@@ -39,25 +37,9 @@
 				</div>
 
 			</div>
-
-			<div id='empty' class='tab'>
-
-			</div>
 	</header>
 
 	<div id='start'>
-		<main id='wel'>
-			<p>Добро пожаловать</p>
-			<div>
-				<p>Здесь вы можите:</p>
-				<p><a>Найти нужный торговый маршрут по фильтру<a></p>
-				<p><a>Уточнить цены на товары по таблице<a></p>
-				<p><a>Посмотреть все локации доступные в игре<a></p>
-				<p><a>Узнать о товарах побольше<a></p>
-				<p><a>Прочитать о кораблях больше<a></p>
-				<p>и если вы это читайте, то пока вы не покинули сайт, вам не нужен интернет для просмотра страниц</p>
-			</div>
-		</main>
 	</div>
 
 	<footer>
@@ -66,6 +48,5 @@
 
 <script type="text/javascript" src="js/js750px.js"></script>
 <script type="text/javascript" src="js/start.js"></script>
-
 </body>
 </html>

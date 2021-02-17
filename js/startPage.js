@@ -46,7 +46,8 @@ let startPage ={
                   </div>
             `
             document.body.append(mainDiv)
-            this.userZajal('scale(1)',0.5,'35px','ease-out 2s',400,'#AAB','60px',0.7,1000,false)
+            this.userZajal('scale(1)',0.5,'35px','ease-out 2s',400,'#AAB','60px',0.7,1000,false)      //нужно было использовать деструктуризацию и параметры в объект положить...
+            document.body.querySelector('.startPageflexbox').addEventListener('touchstart',()=>startPage.userZajal('scale(1.8)',1  ,'18px','linear 1s',100,'#424242','не использ','не использ','не использ',true,'115px',1 ,8))
       },
 //------------------------------------------------------------------------------
       userZajal(transform,opacity,letterSpacing,transition,timeout,color,BT,Op,TO,bottomText,height,numberForSquare,ms){
@@ -105,18 +106,23 @@ let startPage ={
             document.body.querySelector('.startPageflexbox').onmouseup = ''
             document.body.querySelector('.startPageflexbox').style.background = '#080808'
             this.userZajal('scale(1.8)',0,'18px','ease-in 0.5s',0,'#424242','-60px',0,0,false)
-
             setTimeout(()=>{
-                  start.removeDOM(true, 'startPageStarterID')
-                  document.body.querySelector('.mainPage_start').style.opacity = 1
-                  document.body.querySelector('header').style.opacity = 1
+                  document.getElementById('startPageStarterID').remove()
+                  document.getElementById('start').style.transition = '1s ease-out 0.3s';
+                  document.getElementById('start').style.opacity = 1
+                  document.querySelector('header').style.opacity = 1
             },1000)
-
       },
 //------------------------------------------------------------------------------
 }
 
 startPage.starterPage()
+
+try {
+      mainPage.start()
+} catch (err) {
+      setTimeout(()=>mainPage.start(),200)
+}
 
 
 
