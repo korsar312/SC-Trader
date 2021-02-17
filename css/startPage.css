@@ -23,9 +23,9 @@
                   .startPageIco{
                         background-image: url(../sys_img/wel.png);
                         background-size: cover;
-                        width: 200px;
-                        height: 200px;
-                        margin-top: 10spx;
+                        width: 25vmin;
+                        height: 25vmin;
+                        margin-top: 10px;
                         opacity: 0;
                         transition:  ease  3s;
                   }
@@ -33,7 +33,7 @@
             .startPageNameProg{
                   flex: 1;
                   color: #AAB;
-                  letter-spacing: 35px;
+                  letter-spacing: 4vmin;
                   font-size: 4vmin;
                   display: flex;
                   text-align: center;
@@ -62,6 +62,7 @@
                         border: 3px solid #AAB;
                         border-radius: 51px;
                         overflow: hidden;
+
                   }
                         .redScuareInSide{
                               background: red;
@@ -76,15 +77,16 @@
                                     border: 3px solid #AAB;
                                     border-radius: 44px;
                                     background:#ffffff;
+                                    display: flex;
+                                    Justify-content: center;
+                                    align-items: center;
+                                    transition: ease-in 0.5s;
                               }
 
                                     .scuareText{
-                                          position: absolute;
+                                          height: 30px;
                                           font-size: 17pt;
-                                          margin: 35px 0 0 10px;
                                           color: #878787;
-                                          -khtml-user-select: none;
-                                          -webkit-user-select: none;
                                           user-select: none;
                                           transition:  linear 1s;
                                     }

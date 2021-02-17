@@ -106,6 +106,7 @@ let startPage ={
             document.body.querySelector('.startPageflexbox').onmouseup = ''
             document.body.querySelector('.startPageflexbox').style.background = '#080808'
             this.userZajal('scale(1.8)',0,'18px','ease-in 0.5s',0,'#424242','-60px',0,0,false)
+            document.body.querySelector('.scuare').style.background = '#080808'
             setTimeout(()=>{
                   document.getElementById('startPageStarterID').remove()
                   document.getElementById('start').style.transition = '1s ease-out 0.3s';
