@@ -27,3 +27,13 @@ body {
 {
   background: rgba(0, 0, 0, 0.5);
 }
+#namePage{
+	text-align: center;
+	height: 40px;
+		font-size: 22px;
+}
+#content{
+	height: calc(100vh - 120px);
+	overflow: auto;
+	text-align: center;
+}

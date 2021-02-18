@@ -9,8 +9,8 @@ let startPage ={
             mainDiv.className = `startPageStarter`
             mainDiv.id = `startPageStarterID`
             mainDiv.innerHTML = `
-                  <div onmousedown="startPage.userZajal('scale(1.8)',1  ,'3vmin','linear 1s',100,'#424242','не использ','не использ','не использ',true,'115px',1 ,8)"
-                       onmouseup="startPage.userZajal('scale(1)'  ,0.5,'4vmin','ease-out 0.5s',100,'#AAB','не использ','не использ','не использ',true,'0px'  ,-1,5)"
+                  <div onmousedown="startPage.userZajal('scale(1.8)',1  ,'3vmin','linear 1s',100,'#424242','не использ','не использ','не использ',true,'115px',1 ,8); startPage.botScuareRed().classList.toggle('redScuareInSideOfClick')"
+                       onmouseup="startPage.userZajal('scale(1)'  ,0.5,'4vmin','ease-out 0.5s',100,'#AAB','не использ','не использ','не использ',true,'0px'  ,-1,5); startPage.botScuareRed().style.height = '0'; startPage.botScuareRed().classList.toggle('redScuareInSideOfClick')"
                        class='startPageflexbox'>
                         <div class='startPageIcoAndGame'>
                               <div class='startPageIco'>
@@ -35,7 +35,7 @@ let startPage ={
                         <div class='startPageStartButton'>
 
                               <div class='scuareInSide'>
-                                    <div style='height: 0px;' class='redScuareInSide'>
+                                    <div style='height: 0px;' class='redScuareInSide redScuareInSideOfClick'>
                                           <div class='scuare'>
                                                 <span class='scuareText'>Зажмите</span>
                                           </div>
@@ -47,7 +47,8 @@ let startPage ={
             `
             document.body.append(mainDiv)
             this.userZajal('scale(1)',0.5,'4vmin','ease-out 2s',400,'#AAB','60px',0.7,1000,false)      //нужно было использовать деструктуризацию и параметры в объект положить...
-            document.body.querySelector('.startPageflexbox').addEventListener('touchstart',()=>startPage.userZajal('scale(1.8)',1  ,'18px','linear 1s',100,'#424242','не использ','не использ','не использ',true,'115px',1 ,8))
+            document.body.querySelector('.startPageflexbox').addEventListener('touchend',()=>{startPage.userZajal('scale(1)'  ,0.5,'4vmin','ease-out 0.5s',100,'#AAB','не использ','не использ','не использ',true,'0px'  ,-1,5); startPage.botScuareRed().style.height = '0'; startPage.botScuareRed().classList.toggle('redScuareInSideOfClick')})
+            document.body.querySelector('.startPageflexbox').addEventListener('touchstart',()=>{startPage.userZajal('scale(1.8)',1  ,'18px','linear 1s',100,'#424242','не использ','не использ','не использ',true,'115px',1 ,8); startPage.botScuareRed().classList.toggle('redScuareInSideOfClick')})
       },
 //------------------------------------------------------------------------------
       userZajal(transform,opacity,letterSpacing,transition,timeout,color,BT,Op,TO,bottomText,height,numberForSquare,ms){
@@ -72,11 +73,14 @@ let startPage ={
                   let botScuareText = document.body.querySelector('.scuareText')
                   botScuareText.classList.toggle("scuareTextFalse")
                   clearInterval(this.timerId)
+                  this.botScuareRed().style.height = '100%'
                   this.timerId = setInterval(()=>{
-                        this.botScuareRed().style.height = this.heightRedSquer+'px';
+                        //this.botScuareRed().style.height = this.heightRedSquer+'px';
+
+
                         this.heightRedSquer +=  numberForSquare;
-                        if(this.heightRedSquer < 0){clearInterval(this.timerId)}
-                        if(this.heightRedSquer > 120){
+                        if(this.heightRedSquer < 0){clearInterval(this.timerId)}          //нужно было делать таймер который считает в '+' секунды при нажатии и в '-' при отжатии, тогда бы я смог сделать элемент адаптивным... UPD: это было проще, чем я думал xD
+                        if(this.heightRedSquer > 100){
                               clearInterval(this.timerId)
                               startPage.startPageItsOver()
                         }

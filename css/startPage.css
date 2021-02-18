@@ -57,25 +57,33 @@
                   transition: ease 3s;
             }
                   .scuareInSide{
-                        width: 115px;
-                        height: 115px;
-                        border: 3px solid #AAB;
-                        border-radius: 51px;
+                        width: 12vmin;
+                        height: 12vmin;
+                        border: 0.3vmin solid #AAB;
+                        border-radius: 3vmin;
                         overflow: hidden;
+                        transition: ease-in 0.5s;
 
                   }
                         .redScuareInSide{
                               background: red;
                               width: 115px;
+                              transition: linear 0.8s;
+                              width: calc(12vmin);
+                              height: calc(12vmin);
                         }
+                        .redScuareInSideOfClick{
+                              transition: linear 0.5s;
+                        }
+
                               .scuare{
                                     position: absolute;
-                                    top: 7px;
-                                    left: 7px;
-                                    width: 101px;
-                                    height: 101px;
-                                    border: 3px solid #AAB;
-                                    border-radius: 44px;
+                                    top: 0.5vmin;
+                                    left: 0.5vmin;
+                                    width: calc(12vmin - 1vmin);
+                                    height: calc(12vmin - 1vmin);
+                                    border: 0.3vmin solid #AAB;
+                                    border-radius: calc(3vmin - 0.5vmin);
                                     background:#ffffff;
                                     display: flex;
                                     Justify-content: center;
@@ -84,13 +92,12 @@
                               }
 
                                     .scuareText{
-                                          height: 30px;
-                                          font-size: 17pt;
+                                          font-size: 2vmin;
                                           color: #878787;
                                           user-select: none;
-                                          transition:  linear 1s;
+                                          transition: ease-in 0.5s;
                                     }
                                     .scuareTextFalse{
                                           color: #433333;
-                                          transition:  linear 1.7s;
+                                          transition: ease-in 0.5s;
                                     }

@@ -18,34 +18,51 @@ let filterPage = {
             start.renderPageName('Фильтр товаров')
             let div = document.getElementById('content')
             div.innerHTML = `
-                  <form>
-                        <div старт>
-
+                  <form class='filterPage_formFilter'>
+                        <div class='filterPage_filter'>
+                        <p>Локация покупки товара</p>
+                              <select class='filterPage_formInput'>
+                                    <option>Пункт 1</option>
+                              </select>
                         </div>
-                        <div конец>
 
+                        <div class='filterPage_filter'>
+                        <p>Локация продажи товара</p>
+                              <select class='filterPage_formInput'>
+                                    <option>Пункт 1</option>
+                              </select>
                         </div>
-                        <div товар>
 
+                        <div class='filterPage_filter'>
+                        <p>Товар</p>
+                              <select class='filterPage_formInput'>
+                                    <option>Пункт 1</option>
+                              </select>
                         </div>
-                        <div планеты>
 
+                        <div class='filterPage_filter'>
+                        <p>Свободное CSU</p>
+                              <input class='filterPage_formInput'></input>
                         </div>
-                        <div кол-во SCU>
 
+                        <div class='filterPage_filter'>
+                        <p>Количество денег</p>
+                              <input class='filterPage_formInput'></input>
                         </div>
-                        <div кол-во денег>
 
+                        <div class='filterPage_filter'>
+                              <select class='filterPage_formInput'>
+                                    <option>сортировка</option>
+                              </select>
                         </div>
-                        <div сортировка>
 
-                        </div>
-                        <div поехали>
-
+                        <div class='filterPage_filter' поехали>
+                              <button class='filterPage_formInput'>Поехали
+                              </button>
                         </div>
                   </form>
             `
-            this.toBeginFilter()
+            //this.toBeginFilter()
       },
 //------------------------------------------------------------------------------
       toBeginFilter(){                                                          //в контексте "станция покупает\Станция продает"

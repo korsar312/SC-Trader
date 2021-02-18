@@ -1,0 +1,9 @@
+.filterPage_formFilter{
+      display: flex;
+      flex-wrap: wrap;
+}
+      .filterPage_filter{
+            margin: 10px;
+            width: 150px;
+            height: 100px;
+      }
