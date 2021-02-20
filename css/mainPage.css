@@ -59,3 +59,11 @@
                         opacity: 1;
 
                   }
+                  #mainPage_Filled{
+                        position: absolute;
+                        bottom: 10px;
+                        width: 15vmin;
+                        height: 15vmin;
+                        opacity: 0.2;
+                        transition: ease-out  0.3s;
+                  }

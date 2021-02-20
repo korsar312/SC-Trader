@@ -1,3 +1,4 @@
+"use strict"
 {
 	const mediaQuery = window.matchMedia('(max-width: 880px)')
 	const search = document.getElementById('search_div')

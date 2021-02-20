@@ -59,8 +59,8 @@
                   .scuareInSide{
                         width: 12vmin;
                         height: 12vmin;
-                        border: 0.3vmin solid #AAB;
-                        border-radius: 3vmin;
+                        border: 0.2vmin solid #AAB;
+                        border-radius: 4vmin;
                         overflow: hidden;
                         transition: ease-in 0.5s;
 
@@ -82,8 +82,8 @@
                                     left: 0.5vmin;
                                     width: calc(12vmin - 1vmin);
                                     height: calc(12vmin - 1vmin);
-                                    border: 0.3vmin solid #AAB;
-                                    border-radius: calc(3vmin - 0.5vmin);
+                                    border: 0.2vmin solid #AAB;
+                                    border-radius: calc(4vmin - 0.5vmin);
                                     background:#ffffff;
                                     display: flex;
                                     Justify-content: center;

@@ -1,9 +1,23 @@
 .filterPage_formFilter{
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      overflow: hidden;
 }
       .filterPage_filter{
-            margin: 10px;
+            padding: 10px 10px 100px 10px;
             width: 150px;
             height: 100px;
+
+      }
+      .filterPage_formInput{
+            width: 130px;
+      }
+      .filterPage_but{
+            display: block;
+            padding: 10px 10px;
+      }
+
+      .filterPage_ProfitList{
+            margin: 10px
       }
