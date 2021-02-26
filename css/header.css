@@ -1,23 +1,10 @@
-body{
-	margin: 0;
-	padding: 0;
-	color: #fff;
-	font: normal 12pt serif;
-}
-
-#start{
-	position: absolute;
-	height: calc(100% - 85px);
-	width: 100%;
-}
-
 header{
 	display: flex;
 	background-color: black;
 	height: 40px;
 	width: 100%;
 	color: #ffffff;
-	transition: ease-out 0.4s 0s ;
+	transition: ease-out 1s 0.3s ;
 	opacity: 0;
 	z-index: 180;
 	overflow: hidden;
@@ -26,6 +13,7 @@ header{
 	#tab{
 		display: flex;
 		flex: 1;
+		user-select: none;
 	}
 
 		#logo{
@@ -39,75 +27,71 @@ header{
 
 		#name{
 			transition: ease-out 0.5s;
+			width: 100px;
+			font-size: 16pt;
 		}
 			#name p{
-				width: 200px;
+				margin: 10px 0;
 			}
 
 		#workspace{
 			display: flex;
-			width: 400px;
+			position: relative;
+			width: 100px;
 			border-right: 1px solid #ffffff;
 			border-left: 1px solid #ffffff;
 			text-align: center;
 			text-decoration: underline;
 			transition: ease-out 0.4s;
+			margin: 0 15px;
 		}
-			.workspace_opt{
-				transition: ease-out 0.4s;
+
+			#homeIco, #homeSearch{
+				position: absolute;
+				top: 5px;
+				left: 10px;
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
 			}
 
-			#workspace p {
-				flex: 0.5;
-				cursor: pointer;
-				margin: 15px 5px;
+			#homeSearch{
+				left: 60px;
 			}
 
 		#search_div{
-			position: relative;
+			position: absolute;
+			left: 0;
+			top: 0;
 			transition: ease-out 0.4s;
 		}
 			#search{
-				height: 30px;
-				width: 440px;
+				height: 40px;
+				width: 258px;
 				font-size: 16pt;
-				margin-top: 5px;
-				transition: ease-out 0.4s;
-				padding: 0px 0px 0px 30px;
+				padding: 0px 40px 0px 30px;
 			}
-
+			#search:focus{
+				outline: 0;
+			}
 			#search_icon{
 				position: absolute;
 				top: 10px;
 				left: 5px;
+				width: 20px;
+				height: 20px;
 				cursor: pointer;
-				transition: ease-out 0.4s;
 			}
 
-			#search:focus{
-				width: 40vw;
+			#closeSearch{
+				position: absolute;
+				top: -2px;
+				left: 216px;
+				width: 44px;
+				height: 44px;
+				cursor: pointer;
 			}
-
-		.info{
-			margin: -5px 15px;
-			width: 150px;
+		.search_divItsOpen{
+			opacity: 0;
+			visibility: hidden;
 		}
-
-	#empty{
-		flex: 0.5;
-	}
-
-@media screen and (max-width: 1100px) {
-	#header{width: 100%}
-	#name {opacity: 0; width: 0px; margin: -5px 0px; visibility: hidden;}
-	#search:focus{width: 440px;}
-}
-@media screen and (max-width: 920px) {
-	#logo{opacity: 0; width: 0px; margin: 5px 0px; visibility: hidden;}
-	#workspace{border: none;}
-	#search{width: 355px;}
-}
-@media screen and (max-width: 400px) {
-	#workspace, #workspace p{margin-left: -200px}
-	#search{width: 130px;}
-}

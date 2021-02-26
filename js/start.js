@@ -118,6 +118,7 @@ start.loadObject("http://127.0.0.1:3000")
 
 universe = {
 	nyx:{
+            id: 'nyx',
 		name: 'Nyx',
 		type: 'System',
 		parrent: null,
@@ -130,6 +131,7 @@ universe = {
 		image: '',
 	},
       		delamar:{
+                        id: 'delamar',
       			name: 'Delamar',
       			type: 'Planet',
       			parrent: 'nyx',
@@ -142,6 +144,7 @@ universe = {
       			image: '',
       		},
             			levski:{
+                                    id: 'levski',
             				name: 'Levski',
             				type: 'Base',
             				parrent: 'delamar',
@@ -154,6 +157,7 @@ universe = {
             				image: '',
             			},
       stanton:{
+            id: 'stanton',
             name: 'Stanton',
             type: 'System',
             parrent: null,
@@ -166,6 +170,7 @@ universe = {
             image: '',
       },
                   arcCorp:{
+                        id: 'arcCorp',
                         name: 'ArcCorp',
                         type: 'Planet',
                         parrent: 'stanton',
@@ -178,6 +183,7 @@ universe = {
                         image: '',
                   },
                               ARC_L1:{
+                                    id: 'ARC_L1',
                                     name: 'ARC-L1',
                                     type: 'asteroidField',
                                     parrent: 'arcCorp',
@@ -190,6 +196,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_ARC_L1:{
+                                                id: 'R_and_R_ARC_L1',
                                                 name: 'R&R ARC-L1',
                                                 type: 'Station',
                                                 parrent: 'ARC_L1',
@@ -202,6 +209,7 @@ universe = {
                                                 image: '',
                                           },
                               area18:{
+                                    id: 'area18',
                                     name: 'Area18',
                                     type: 'Planet',
                                     parrent: 'arcCorp',
@@ -214,6 +222,7 @@ universe = {
                                     image: '',
                               },
                                           area18_IO_North_Tower:{
+                                                id: 'area18_IO_North_Tower',
                                                 name: 'Area18 IO North Tower',
                                                 type: 'Base',
                                                 parrent: 'area18',
@@ -226,6 +235,7 @@ universe = {
                                                 image: '',
                                           },
                                           area18_TDD:{
+                                                id: 'area18_TDD',
                                                 name: 'Area18 TDD',
                                                 type: 'Base',
                                                 parrent: 'area18',
@@ -238,6 +248,7 @@ universe = {
                                                 image: '',
                                           },
                               baijini_Point:{
+                                    id: 'baijini_Point',
                                     name: 'Baijini Point',
                                     type: 'Station',
                                     parrent: 'arcCorp',
@@ -250,6 +261,7 @@ universe = {
                                     image: '',
                               },
                               lyria:{
+                                    id: 'lyria',
                                     name: 'Lyria',
                                     type: 'Moon',
                                     parrent: 'arcCorp',
@@ -262,6 +274,7 @@ universe = {
                                     image: '',
                               },
                                           humboldt_Mines:{
+                                                id: 'humboldt_Mines',
                                                 name: 'Humboldt Mines',
                                                 type: 'Outpost',
                                                 parrent: 'lyria',
@@ -274,6 +287,7 @@ universe = {
                                                 image: '',
                                           },
                                           loveridge_Mineral_Reserve:{
+                                                id: 'loveridge_Mineral_Reserve',
                                                 name: 'Loveridge Mineral Reserve',
                                                 type: 'Outpost',
                                                 parrent: 'lyria',
@@ -286,6 +300,7 @@ universe = {
                                                 image: '',
                                           },
                                           paradise_Cove:{
+                                                id: 'paradise_Cove',
                                                 name: 'Paradise Cove',
                                                 type: 'Outpost',
                                                 parrent: 'lyria',
@@ -298,6 +313,7 @@ universe = {
                                                 image: '',
                                           },
                                           shubin_Mining_Facility_SAL_2:{
+                                                id: 'shubin_Mining_Facility_SAL_2',
                                                 name: 'Shubin Mining Facility SAL-2',
                                                 type: 'Outpost',
                                                 parrent: 'lyria',
@@ -310,6 +326,7 @@ universe = {
                                                 image: '',
                                           },
                                           shubin_Mining_Facility_SAL_5:{
+                                                id: 'shubin_Mining_Facility_SAL_5',
                                                 name: 'Shubin Mining Facility SAL-5',
                                                 type: 'Outpost',
                                                 parrent: 'lyria',
@@ -322,6 +339,7 @@ universe = {
                                                 image: '',
                                           },
                                           the_Orphanage:{
+                                                id: 'the_Orphanage',
                                                 name: 'THe Orphanage',
                                                 type: 'Outpost',
                                                 parrent: 'lyria',
@@ -334,6 +352,7 @@ universe = {
                                                 image: '',
                                           },
                               wala:{
+                                    id: 'wala',
                                     name: 'Wala',
                                     type: 'Moon',
                                     parrent: 'arcCorp',
@@ -346,6 +365,7 @@ universe = {
                                     image: '',
                               },
                                           arcCorp_Mining_Area_045:{
+                                                id: 'arcCorp_Mining_Area_045',
                                                 name: 'ArcCorp Mining Area 045',
                                                 type: 'Outpost',
                                                 parrent: 'wala',
@@ -358,6 +378,7 @@ universe = {
                                                 image: '',
                                           },
                                           arcCorp_Mining_Area_048:{
+                                                id: 'arcCorp_Mining_Area_048',
                                                 name: 'ArcCorp Mining Area 048',
                                                 type: 'Outpost',
                                                 parrent: 'wala',
@@ -370,6 +391,7 @@ universe = {
                                                 image: '',
                                           },
                                           arcCorp_Mining_Area_056:{
+                                                id: 'arcCorp_Mining_Area_056',
                                                 name: 'ArcCorp Mining Area 056',
                                                 type: 'Outpost',
                                                 parrent: 'wala',
@@ -382,6 +404,7 @@ universe = {
                                                 image: '',
                                           },
                                           arcCorp_Mining_Area_061:{
+                                                id: 'arcCorp_Mining_Area_061',
                                                 name: 'ArcCorp Mining Area 061',
                                                 type: 'Outpost',
                                                 parrent: 'wala',
@@ -394,6 +417,7 @@ universe = {
                                                 image: '',
                                           },
                                           Samson_and_Sons_Salvage_Center:{
+                                                id: 'Samson_and_Sons_Salvage_Center',
                                                 name: 'Samson & Sons Salvage Center',
                                                 type: 'Outpost',
                                                 parrent: 'wala',
@@ -406,6 +430,7 @@ universe = {
                                                 image: '',
                                           },
                   crusader:{
+                        id: 'crusader',
                         name: 'Crusader',
                         type: 'Planet',
                         parrent: 'stanton',
@@ -418,6 +443,7 @@ universe = {
                         image: '',
                   },
                               CRU_L1:{
+                                    id: 'CRU_L1',
                                     name: 'CRU-L1',
                                     type: 'asteroidField',
                                     parrent: 'crusader',
@@ -430,6 +456,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_CRU_L1:{
+                                                id: 'R_and_R_CRU_L1',
                                                 name: 'R&R CRU-L1',
                                                 type: 'Station',
                                                 parrent: 'CRU_L1',
@@ -442,6 +469,7 @@ universe = {
                                                 image: '',
                                           },
                               CRU_L4:{
+                                    id: 'CRU_L4',
                                     name: 'CRU_L4',
                                     type: 'asteroidField',
                                     parrent: 'crusader',
@@ -455,6 +483,7 @@ universe = {
 
                               },
                                           R_and_R_CRU_L4:{
+                                                id: 'R_and_R_CRU_L4',
                                                 name: 'R&R CRU-L4',
                                                 type: 'Station',
                                                 parrent: 'CRU_L4',
@@ -467,6 +496,7 @@ universe = {
                                                 image: '',
                                           },
                                           R_and_R_CRU_L4_Hidden_Terminal:{
+                                                id: 'R_and_R_CRU_L4_Hidden_Terminal',
                                                 name: 'R&R CRU-L4 Hidden Terminal',
                                                 type: 'Station',
                                                 parrent: 'CRU_L4',
@@ -479,6 +509,7 @@ universe = {
                                                 image: '',
                                           },
                               CRU_L5:{
+                                    id: 'CRU_L5',
                                     name: 'CRU-L5',
                                     type: 'asteroidField',
                                     parrent: 'crusader',
@@ -491,6 +522,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_CRU_L5:{
+                                                id: 'R_and_R_CRU_L5',
                                                 name: 'R&R CRU-L5',
                                                 type: 'Station',
                                                 parrent: 'CRU_L5',
@@ -503,6 +535,7 @@ universe = {
                                                 image: '',
                                           },
                                           R_and_R_CRU_L5_Hidden_Terminal:{
+                                                id: 'R_and_R_CRU_L5_Hidden_Terminal',
                                                 name: 'R&R CRU-L5 Hidden Terminal',
                                                 type: 'Station',
                                                 parrent: 'CRU_L5',
@@ -515,6 +548,7 @@ universe = {
                                                 image: '',
                                           },
                               port_Olisar:{
+                                    id: 'port_Olisar',
                                     name: 'Port Olisar',
                                     type: 'Station',
                                     parrent: 'crusader',
@@ -527,6 +561,7 @@ universe = {
                                     image: '',
                               },
                               cellin:{
+                                    id: 'cellin',
                                     name: 'Cellin',
                                     type: 'Moon',
                                     parrent: 'crusader',
@@ -539,6 +574,7 @@ universe = {
                                     image: '',
                               },
                                           gallete_Family_Farms:{
+                                                id: 'gallete_Family_Farms',
                                                 name: 'Gallete Family Farms',
                                                 type: 'Outpost',
                                                 parrent: 'cellin',
@@ -551,6 +587,7 @@ universe = {
                                                 image: '',
                                           },
                                           hickes_Research:{
+                                                id: 'hickes_Research',
                                                 name: 'Hickes Research',
                                                 type: 'Outpost',
                                                 parrent: 'cellin',
@@ -563,6 +600,7 @@ universe = {
                                                 image: '',
                                           },
                                           private_Property:{
+                                                id: 'private_Property',
                                                 name: 'Private Property',
                                                 type: 'Outpost',
                                                 parrent: 'cellin',
@@ -575,6 +613,7 @@ universe = {
                                                 image: '',
                                           },
                                           terra_Mills_HydroFarm:{
+                                                id: 'terra_Mills_HydroFarm',
                                                 name: 'Terra Mills HydroFarm',
                                                 type: 'Outpost',
                                                 parrent: 'cellin',
@@ -587,6 +626,7 @@ universe = {
                                                 image: '',
                                           },
                                           tram_and_Myers_Mining:{
+                                                id: 'tram_and_Myers_Mining',
                                                 name: 'Tram & Myers Mining',
                                                 type: 'Outpost',
                                                 parrent: 'cellin',
@@ -599,6 +639,7 @@ universe = {
                                                 image: '',
                                           },
                               daymar:{
+                                    id: 'daymar',
                                     name: 'Daymar',
                                     type: 'Moon',
                                     parrent: 'crusader',
@@ -611,6 +652,7 @@ universe = {
                                     image: '',
                               },
                                           arcCorp_Mining_141:{
+                                                id: 'arcCorp_Mining_141',
                                                 name: 'ArcCorp Mining 141',
                                                 type: 'Outpost',
                                                 parrent: 'daymar',
@@ -623,6 +665,7 @@ universe = {
                                                 image: '',
                                           },
                                           bountiful_Harvest_Hydroponics:{
+                                                id: 'bountiful_Harvest_Hydroponics',
                                                 name: 'Bountiful Harvest Hydroponics',
                                                 type: 'Outpost',
                                                 parrent: 'daymar',
@@ -635,6 +678,7 @@ universe = {
                                                 image: '',
                                           },
                                           brios_Breaker_Yard:{
+                                                id: 'brios_Breaker_Yard',
                                                 name: 'Brios Breaker Yard',
                                                 type: 'Outpost',
                                                 parrent: 'daymar',
@@ -647,6 +691,7 @@ universe = {
                                                 image: '',
                                           },
                                           kudre_Ore:{
+                                                id: 'kudre_Ore',
                                                 name: 'Kudre Ore',
                                                 type: 'Outpost',
                                                 parrent: 'daymar',
@@ -659,6 +704,7 @@ universe = {
                                                 image: '',
                                           },
                                           nuen_Waste_Management:{
+                                                id: 'nuen_Waste_Management',
                                                 name: 'Nuen Waste Management',
                                                 type: 'Outpost',
                                                 parrent: 'daymar',
@@ -671,6 +717,7 @@ universe = {
                                                 image: '',
                                           },
                                           shubin_Mining_Facility_SCD_1:{
+                                                id: 'shubin_Mining_Facility_SCD_1',
                                                 name: 'Shubin Mining Facility SCD-1',
                                                 type: 'Outpost',
                                                 parrent: 'daymar',
@@ -683,6 +730,7 @@ universe = {
                                                 image: '',
                                           },
                               yela:{
+                                    id: 'yela',
                                     name: 'Yela',
                                     type: 'Moon',
                                     parrent: 'crusader',
@@ -695,6 +743,7 @@ universe = {
                                     image: '',
                               },
                                           arcCorp_Mining_157:{
+                                                id: 'arcCorp_Mining_157',
                                                 name: 'ArcCorp Mining 157',
                                                 type: 'Outpost',
                                                 parrent: 'yela',
@@ -707,6 +756,7 @@ universe = {
                                                 image: '',
                                           },
                                           benson_Mining_Outpost:{
+                                                id: 'benson_Mining_Outpost',
                                                 name: 'Benson Mining Outpost',
                                                 type: 'Outpost',
                                                 parrent: 'yela',
@@ -719,6 +769,7 @@ universe = {
                                                 image: '',
                                           },
                                           deakins_Research:{
+                                                id: 'deakins_Research',
                                                 name: 'Deakins Research',
                                                 type: 'Outpost',
                                                 parrent: 'yela',
@@ -731,6 +782,7 @@ universe = {
                                                 image: '',
                                           },
                                           grimHEX:{
+                                                id: 'grimHEX',
                                                 name: 'GrimHEX',
                                                 type: 'Station',
                                                 parrent: 'yela',
@@ -743,6 +795,7 @@ universe = {
                                                 image: '',
                                           },
                                           jumptown:{
+                                                id: 'jumptown',
                                                 name: 'Jumptown',
                                                 type: 'Outpost',
                                                 parrent: 'yela',
@@ -755,6 +808,7 @@ universe = {
                                                 image: '',
                                           },
                                           NT_999_XX:{
+                                                id: 'NT_999_XX',
                                                 name: 'NT_999_XX',
                                                 type: 'Outpost',
                                                 parrent: 'yela',
@@ -767,6 +821,7 @@ universe = {
                                                 image: '',
                                           },
                   hurston:{
+                        id: 'hurston',
                         name: 'Hurston',
                         type: 'Planet',
                         parrent: 'stanton',
@@ -779,6 +834,7 @@ universe = {
                         image: '',
                   },
                               everus_Harbor:{
+                                    id: 'everus_Harbor',
                                     name: 'Everus Harbor',
                                     type: 'Station',
                                     parrent: 'hurston',
@@ -791,6 +847,7 @@ universe = {
                                     image: '',
                               },
                               HDMS_Edmond:{
+                                    id: 'HDMS_Edmond',
                                     name: 'HDMS Edmond',
                                     type: 'Outpost',
                                     parrent: 'hurston',
@@ -803,6 +860,7 @@ universe = {
                                     image: '',
                               },
                               HDMS_Hadley:{
+                                    id: 'HDMS_Hadley',
                                     name: 'HDMS Hadley',
                                     type: 'Outpost',
                                     parrent: 'hurston',
@@ -815,6 +873,7 @@ universe = {
                                     image: '',
                               },
                               HDMS_Oparei:{
+                                    id: 'HDMS_Oparei',
                                     name: 'HDMS Oparei',
                                     type: 'Outpost',
                                     parrent: 'hurston',
@@ -827,6 +886,7 @@ universe = {
                                     image: '',
                               },
                               HDMS_Pinewood:{
+                                    id: 'HDMS_Pinewood',
                                     name: 'HDMS Pinewood',
                                     type: 'Outpost',
                                     parrent: 'hurston',
@@ -839,6 +899,7 @@ universe = {
                                     image: '',
                               },
                               HDMS_Stanhope:{
+                                    id: 'HDMS_Stanhope',
                                     name: 'HDMS Stanhope',
                                     type: 'Outpost',
                                     parrent: 'hurston',
@@ -851,6 +912,7 @@ universe = {
                                     image: '',
                               },
                               HDMS_Thedus:{
+                                    id: 'HDMS_Thedus',
                                     name: 'HDMS Thedus',
                                     type: 'Outpost',
                                     parrent: 'hurston',
@@ -863,6 +925,7 @@ universe = {
                                     image: '',
                               },
                               HUR_L1:{
+                                    id: 'HUR_L1',
                                     name: 'HUR-L1',
                                     type: 'asteroidField',
                                     parrent: 'hurston',
@@ -875,6 +938,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_HUR_L1:{
+                                                id: 'R_and_R_HUR_L1',
                                                 name: 'R&R HUR-L1',
                                                 type: 'Station',
                                                 parrent: 'HUR_L1',
@@ -887,6 +951,7 @@ universe = {
                                                 image: '',
                                           },
                               HUR_L2:{
+                                    id: 'HUR_L2',
                                     name: 'HUR-L2',
                                     type: 'asteroidField',
                                     parrent: 'hurston',
@@ -899,6 +964,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_HUR_L2:{
+                                                id: 'R_and_R_HUR_L2',
                                                 name: 'R&R HUR-L2',
                                                 type: 'Station',
                                                 parrent: 'HUR_L2',
@@ -911,6 +977,7 @@ universe = {
                                                 image: '',
                                           },
                               HUR_L3:{
+                                    id: 'HUR_L3',
                                     name: 'HUR-L3',
                                     type: 'asteroidField',
                                     parrent: 'hurston',
@@ -923,6 +990,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_HUR_L3:{
+                                                id: 'R_and_R_HUR_L3',
                                                 name: 'R&R HUR-L3',
                                                 type: 'Station',
                                                 parrent: 'HUR_L3',
@@ -935,6 +1003,7 @@ universe = {
                                                 image: '',
                                           },
                               HUR_L4:{
+                                    id: 'HUR_L4',
                                     name: 'HUR-L4',
                                     type: 'asteroidField',
                                     parrent: 'hurston',
@@ -947,6 +1016,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_HUR_L4:{
+                                                id: 'R_and_R_HUR_L4',
                                                 name: 'R&R HUR-L4',
                                                 type: 'Station',
                                                 parrent: 'HUR_L4',
@@ -959,6 +1029,7 @@ universe = {
                                                 image: '',
                                           },
                               HUR_L5:{
+                                    id: 'HUR_L5',
                                     name: 'HUR-L5',
                                     type: 'asteroidField',
                                     parrent: 'hurston',
@@ -971,6 +1042,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_HUR_L5:{
+                                                id: 'R_and_R_HUR_L5',
                                                 name: 'R&R HUR-L5',
                                                 type: 'Station',
                                                 parrent: 'HUR_L5',
@@ -983,6 +1055,7 @@ universe = {
                                                 image: '',
                                           },
                               lorville:{
+                                    id: 'lorville',
                                     name: 'Lorville',
                                     type: 'Base',
                                     parrent: 'hurston',
@@ -995,6 +1068,7 @@ universe = {
                                     image: '',
                               },
                                           lorville_CBD:{
+                                                id: 'lorville_CBD',
                                                 name: 'Lorville-CBD',
                                                 type: 'Base',
                                                 parrent: 'lorville',
@@ -1007,6 +1081,7 @@ universe = {
                                                 image: '',
                                           },
                                           lorville_L19_Admin_Office:{
+                                                id: 'lorville_L19_Admin_Office',
                                                 name: 'Lorville L19 Admin Office',
                                                 type: 'Base',
                                                 parrent: 'lorville',
@@ -1019,6 +1094,7 @@ universe = {
                                                 image: '',
                                           },
                               aberdeen:{
+                                    id: 'aberdeen',
                                     name: 'Aberdeen',
                                     type: 'Moon',
                                     parrent: 'hurston',
@@ -1031,6 +1107,7 @@ universe = {
                                     image: '',
                               },
                                           HDMS_Anderson:{
+                                                id: 'HDMS_Anderson',
                                                 name: 'HDMS Anderson',
                                                 type: 'Outpost',
                                                 parrent: 'aberdeen',
@@ -1043,6 +1120,7 @@ universe = {
                                                 image: '',
                                           },
                                           HDMS_Norgaard:{
+                                                id: 'HDMS_Norgaard',
                                                 name: 'HDMS Norgaard',
                                                 type: 'Outpost',
                                                 parrent: 'aberdeen',
@@ -1055,6 +1133,7 @@ universe = {
                                                 image: '',
                                           },
                               arial:{
+                                    id: 'arial',
                                     name: 'Arial',
                                     type: 'Moon',
                                     parrent: 'hurston',
@@ -1067,6 +1146,7 @@ universe = {
                                     image: '',
                               },
                                           HDMS_Bezdek:{
+                                                id: 'HDMS_Bezdek',
                                                 name: 'HDMS Bezdek',
                                                 type: 'Outpost',
                                                 parrent: 'arial',
@@ -1079,6 +1159,7 @@ universe = {
                                                 image: '',
                                           },
                                           HDMS_Lathan:{
+                                                id: 'HDMS_Lathan',
                                                 name: 'HDMS Lathan',
                                                 type: 'Outpost',
                                                 parrent: 'arial',
@@ -1091,6 +1172,7 @@ universe = {
                                                 image: '',
                                           },
                               ita:{
+                                    id: 'ita',
                                     name: 'Ita',
                                     type: 'Moon',
                                     parrent: 'hurston',
@@ -1103,6 +1185,7 @@ universe = {
                                     image: '',
                               },
                                           HDMS_Ryder:{
+                                                id: 'HDMS_Ryder',
                                                 name: 'HDMS Ryder',
                                                 type: 'Outpost',
                                                 parrent: 'ita',
@@ -1115,6 +1198,7 @@ universe = {
                                                 image: '',
                                           },
                                           HDMS_Woodruff:{
+                                                id: 'HDMS_Woodruff',
                                                 name: 'HDMS Woodruff',
                                                 type: 'Outpost',
                                                 parrent: 'ita',
@@ -1127,6 +1211,7 @@ universe = {
                                                 image: '',
                                           },
                               magda:{
+                                    id: 'magda',
                                     name: 'Magda',
                                     type: 'Moon',
                                     parrent: 'hurston',
@@ -1139,6 +1224,7 @@ universe = {
                                     image: '',
                               },
                                           HDMS_Hahn:{
+                                                id: 'HDMS_Hahn',
                                                 name: 'HDMS Hahn',
                                                 type: 'Outpost',
                                                 parrent: 'magda',
@@ -1151,6 +1237,7 @@ universe = {
                                                 image: '',
                                           },
                                           HDMS_Perlman:{
+                                                id: 'HDMS_Perlman',
                                                 name: 'HDMS Perlman',
                                                 type: 'Outpost',
                                                 parrent: 'magda',
@@ -1163,6 +1250,7 @@ universe = {
                                                 image: '',
                                           },
                               reclamation_and_Disposal_Orinth:{
+                                    id: 'reclamation_and_Disposal_Orinth',
                                     name: 'Reclamation & Disposal Orinth',
                                     type: 'Outpost',
                                     parrent: 'hurston',
@@ -1175,6 +1263,7 @@ universe = {
                                     image: '',
                                           },
                   microTech:{
+                        id: 'microTech',
                         name: 'microTech',
                         type: 'Planet',
                         parrent: 'stanton',
@@ -1187,6 +1276,7 @@ universe = {
                         image: '',
                   },
                               MIC_L1:{
+                                    id: 'MIC_L1',
                                     name: 'MIC-L1',
                                     type: 'asteroidField',
                                     parrent: 'microTech',
@@ -1199,6 +1289,7 @@ universe = {
                                     image: '',
                               },
                                           R_and_R_MIC_L1:{
+                                                id: 'R_and_R_MIC_L1',
                                                 name: 'R&R MIC-L1',
                                                 type: 'Station',
                                                 parrent: 'MIC_L1',
@@ -1211,6 +1302,7 @@ universe = {
                                                 image: '',
                                           },
                               new_Babbage:{
+                                    id: 'new_Babbage',
                                     name: 'New Babbage',
                                     type: 'Base',
                                     parrent: 'microTech',
@@ -1223,6 +1315,7 @@ universe = {
                                     image: '',
                               },
                                           new_Babbage_MT_Planetary_Services:{
+                                                id: 'new_Babbage_MT_Planetary_Services',
                                                 name: 'New Babbage MT Planetary Services',
                                                 type: 'Base',
                                                 parrent: 'microTech',
@@ -1235,6 +1328,7 @@ universe = {
                                                 image: '',
                                           },
                                           new_Babbage_TDD:{
+                                                id: 'new_Babbage_TDD',
                                                 name: 'New Babbage TDD',
                                                 type: 'Base',
                                                 parrent: 'microTech',
@@ -1247,6 +1341,7 @@ universe = {
                                                 image: '',
                                           },
                               outpost_54:{
+                                    id: 'outpost_54',
                                     name: 'Outpost 54',
                                     type: 'Outpost',
                                     parrent: 'microTech',
@@ -1259,6 +1354,7 @@ universe = {
                                     image: '',
                               },
                               port_Tressler:{
+                                    id: 'port_Tressler',
                                     name: 'Port Tressler',
                                     type: 'Station',
                                     parrent: 'microTech',
@@ -1271,6 +1367,7 @@ universe = {
                                     image: '',
                               },
                               rayari_Deltana_Research_Outpost:{
+                                    id: 'rayari_Deltana_Research_Outpost',
                                     name: 'Rayari Deltana Research Outpost',
                                     type: 'Outpost',
                                     parrent: 'microTech',
@@ -1283,6 +1380,7 @@ universe = {
                                     image: '',
                               },
                               shubin_Mining_Facility_SM0_10:{
+                                    id: 'shubin_Mining_Facility_SM0_10',
                                     name: 'Shubin Mining Facility SM0-10',
                                     type: 'Outpost',
                                     parrent: 'microTech',
@@ -1295,6 +1393,7 @@ universe = {
                                     image: '',
                               },
                               shubin_Mining_Facility_SM0_13:{
+                                    id: 'shubin_Mining_Facility_SM0_13',
                                     name: 'Shubin Mining Facility SM0-13',
                                     type: 'Outpost',
                                     parrent: 'microTech',
@@ -1307,6 +1406,7 @@ universe = {
                                     image: '',
                               },
                               shubin_Mining_Facility_SM0_18:{
+                                    id: 'shubin_Mining_Facility_SM0_18',
                                     name: 'Shubin Mining Facility SM0-18',
                                     type: 'Outpost',
                                     parrent: 'microTech',
@@ -1319,6 +1419,7 @@ universe = {
                                     image: '',
                               },
                               shubin_Mining_Facility_SM0_22:{
+                                    id: 'shubin_Mining_Facility_SM0_22',
                                     name: 'Shubin Mining Facility SM0-22',
                                     type: 'Outpost',
                                     parrent: 'microTech',
@@ -1331,6 +1432,7 @@ universe = {
                                     image: '',
                               },
                               calliope:{
+                                    id: 'calliope',
                                     name: 'Calliope',
                                     type: 'Moon',
                                     parrent: 'microTech',
@@ -1343,6 +1445,7 @@ universe = {
                                     image: '',
                               },
                                           ravens_Roost:{
+                                                id: 'ravens_Roost',
                                                 name: 'Ravens Roost',
                                                 type: 'Outpost',
                                                 parrent: 'microTech',
@@ -1355,6 +1458,7 @@ universe = {
                                                 image: '',
                                           },
                                           rayari_Anvik_Research_Outpost:{
+                                                id: 'rayari_Anvik_Research_Outpost',
                                                 name: 'Rayari Anvik Research Outpost',
                                                 type: 'Outpost',
                                                 parrent: 'microTech',
@@ -1367,6 +1471,7 @@ universe = {
                                                 image: '',
                                           },
                                           rayari_Kaltag_Research_Outpost:{
+                                                id: 'rayari_Kaltag_Research_Outpost',
                                                 name: 'Rayari Kaltag Research Outpost',
                                                 type: 'Outpost',
                                                 parrent: 'microTech',
@@ -1379,6 +1484,7 @@ universe = {
                                                 image: '',
                                           },
                                           shubin_Mining_Facility_SMCa_6:{
+                                                id: 'shubin_Mining_Facility_SMCa_6',
                                                 name: 'Shubin Mining Facility SMCa-6',
                                                 type: 'Outpost',
                                                 parrent: 'microTech',
@@ -1391,6 +1497,7 @@ universe = {
                                                 image: '',
                                           },
                                           shubin_Mining_Facility_SMCa_8:{
+                                                id: 'shubin_Mining_Facility_SMCa_8',
                                                 name: 'Shubin Mining Facility SMCa-8',
                                                 type: 'Outpost',
                                                 parrent: 'microTech',
@@ -1403,6 +1510,7 @@ universe = {
                                                 image: '',
                                           },
                               clio:{
+                                    id: 'clio',
                                     name: 'Clio',
                                     type: 'Moon',
                                     parrent: 'microTech',
@@ -1415,6 +1523,7 @@ universe = {
                                     image: '',
                               },
                                           rayari_Cantwell_Research_Outpost:{
+                                                id: 'rayari_Cantwell_Research_Outpost',
                                                 name: 'Rayari Cantwell Research Outpost',
                                                 type: 'Moon',
                                                 parrent: 'microTech',
@@ -1427,6 +1536,7 @@ universe = {
                                                 image: '',
                                           },
                                           rayari_McGrath_Research_Outpost:{
+                                                id: 'rayari_McGrath_Research_Outpost',
                                                 name: 'Rayari McGrath Research Outpost',
                                                 type: 'Moon',
                                                 parrent: 'microTech',
@@ -1439,6 +1549,7 @@ universe = {
                                                 image: '',
                                           },
                               euterpe:{
+                                    id: 'euterpe',
                                     name: 'Euterpe',
                                     type: 'Moon',
                                     parrent: 'microTech',
@@ -1451,6 +1562,7 @@ universe = {
                                     image: '',
                               },
                                           buds_Growery:{
+                                                id: 'buds_Growery',
                                                 name: 'Buds Growery',
                                                 type: 'Moon',
                                                 parrent: 'euterpe',
@@ -1465,497 +1577,178 @@ universe = {
 }                                                                  //удалить как только разберусь с сервом
 itemTrade = {
 	agricium:{
+            id: 'agricium',
 		name: 'Agricium',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	agricultural_supplies:{
+            id: 'agricultural_supplies',
 		name: 'Agricultural Supplies',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	altruciatoxin:{
+            id: 'altruciatoxin',
 		name: 'altruciatoxin',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	aluminum:{
+            id: 'aluminum',
 		name: 'Aluminum',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	astatine:{
+            id: 'astatine',
 		name: 'Astatine',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	beryl:{
+            id: 'beryl',
 		name: 'Beryl',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	chlorine:{
+            id: 'chlorine',
 		name: 'Chlorine',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	corundum:{
+            id: 'corundum',
 		name: 'Corundum',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	diamond:{
+            id: 'diamond',
 		name: 'Diamond',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	distilled_spirits:{
+            id: 'distilled_spirits',
 		name: 'Distilled spirits',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	etam:{
+            id: 'etam',
 		name: 'Etam',
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	fluorine:{
+            id: 'fluorine',
 		name: "Fluorine",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	gold:{
+            id: 'gold',
 		name: "Gold",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	hydrogen:{
+            id: 'hydrogen',
 		name: "Hydrogen",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	iodine:{
+            id: 'iodine',
 		name: "Iodine",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	laranite:{
+            id: 'laranite',
 		name: "Laranite",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	maze:{
+            id: 'maze',
 		name: "Maze",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	medical_supplies:{
+            id: 'medical_supplies',
 		name: "Medical Supplies",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	neon:{
+            id: 'neon',
 		name: "Neon",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	processed_food:{
+            id: 'processed_food',
 		name: "Processed food",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	quartz:{
+            id: 'quartz',
 		name: "Quartz",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	revenant_tree_pollen:{
+            id: 'revenant_tree_pollen',
 		name: "Revenant Tree Pollen",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	scrap:{
+            id: 'scrap',
 		name: "Scrap",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	slam:{
+            id: 'slam',
 		name: "SLAM",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	stims:{
+            id: 'stims',
 		name: "Stims",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	titanium:{
+            id: 'titanium',
 		name: "Stims",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	tungsten:{
+            id: 'tungsten',
 		name: "Tungsten",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	waste:{
+            id: 'waste',
 		name: "Waste",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 	widow:{
+            id: 'widow',
 		name: "WiDoW",
 		description: '',
 		image: '',
-		getTradeItemLocation(how){
-			let arr = []
-			for(i in universe){
-				if(universe[i][how]){
-					let itemList = universe[i][how]
-					for(a of itemList){
-						if(a[0] == this.name){arr.push(universe[i].name)}
-					}
-				}
-			}
-			return arr
-		}
 	},
 }                                                                 //удалить как только разберусь с сервом
 start.loadScript('js/TradeTablePage.js')                                            //удалить как только разберусь с сервом

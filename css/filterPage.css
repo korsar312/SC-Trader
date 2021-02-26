@@ -1,23 +1,84 @@
-.filterPage_formFilter{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      overflow: hidden;
+.filterPage_but{
+      display: block;
+      padding: 10px 10px;
 }
-      .filterPage_filter{
-            padding: 10px 10px 100px 10px;
-            width: 150px;
-            height: 100px;
-
-      }
       .filterPage_formInput{
             width: 130px;
       }
-      .filterPage_but{
-            display: block;
-            padding: 10px 10px;
-      }
 
-      .filterPage_ProfitList{
-            margin: 10px
+.filterPage_workspaces{
+      display: flex;
+      height: calc(100% - 81px);
+}
+      .filterPage_formFilter{
+            flex: 2;
+            overflow: auto;
       }
+            .contextMenu_button{
+                  background: ;
+                  border-left: 2px solid;
+                  border-top: 2px solid;
+                  border-radius: 0px 0px 0px 15px;
+                  margin: 20px 0px;
+                  text-align: left;
+                  padding-left: 10px;
+            }
+                  .contextMenu_nameButton{
+                        padding-top: 9px;
+                        cursor: pointer;
+                        border-bottom: 1px solid #dddddd;
+                  }
+                  .contextMenu_innerContext{
+                        margin-top: 10px;
+                        text-align: left;
+                        height: 0px;
+                        overflow: scroll;
+                        transition:  ease 0.5s;
+                  }
+                  .contextMenu_buttonItsOpen{
+                        height: 100px;
+                  }
+
+
+            .contextMenu_buttonBuy{
+
+            }
+            .contextMenu_buttonSell{
+
+            }
+            .contextMenu_buttonItem{
+
+            }
+            .contextMenu_buttonSCU{
+
+            }
+                  .contextMenu_buttonSCUName{
+                        padding-top: 10px;
+                        border-bottom: 1px solid #dddddd;
+                  }
+                  .filterPage_scu{
+                        border-radius: 15px;
+                        margin: 10px 0;
+                        width: 70%
+                  }
+
+      .filterPage_ProfitFilter{
+            flex: 1;
+            border-left: 2px solid;
+            border-right: 2px solid;
+      }
+            .List{
+                  margin-top: 22px;
+            }
+                  .filterPage_ProfitList{
+                        margin: -2px 0;
+                        padding: 5px 0;
+                        border-top: 2px solid #dddddd;
+                        border-bottom: 2px solid #dddddd;
+                  }
+      .filterPage_DetailFilter{
+            flex: 2;
+      }
+            .filterPage_Detail{
+                  margin-top: 22px;
+            }

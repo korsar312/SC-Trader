@@ -1,9 +1,11 @@
 body {
   font-family: serif, arial;
   background-color: #080808;
+  margin: 0;
+ padding: 0;
+ color: #fff;
+ font: normal 12pt serif;
 }
-
-
 
 .nameTab{
 	margin: 10px;
@@ -11,11 +13,8 @@ body {
 	text-align: center;
 }
 
-::-webkit-scrollbar
-{
-  width: 8px;  /* for vertical scrollbars */
-  height: 8px; /* for horizontal scrollbars */
-
+::-webkit-scrollbar{
+      display:none;
 }
 
 ::-webkit-scrollbar-track
@@ -33,7 +32,12 @@ body {
 		font-size: 22px;
 }
 #content{
-	height: calc(100vh - 120px);
+	height: 100%;
 	overflow: auto;
 	text-align: center;
+}
+#start{
+	position: absolute;
+	height: calc(100% - 85px);
+	width: 100%;
 }

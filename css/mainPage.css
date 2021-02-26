@@ -61,9 +61,11 @@
                   }
                   #mainPage_Filled{
                         position: absolute;
-                        bottom: 10px;
-                        width: 15vmin;
-                        height: 15vmin;
-                        opacity: 0.2;
+                        bottom: 2vmin;
+                        width: 40vmin;
+                        max-width: 400px;
+                        height: 10vmin;
+                        max-height: 100px;
+                        opacity: 0.3;
                         transition: ease-out  0.3s;
                   }

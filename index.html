@@ -1,8 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
 <head lang="<?php echo $str_language; ?>" xml:lang="<?php echo $str_language; ?>">
 	<meta name='viewport' content="width=device-width, initial-scale=1"/>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -22,19 +18,43 @@
 				<div id='logo'>
 				</div>
 
-				<div id='name' class='info'>
-					<p>Торговый гражданин</p>
+				<div id='name'>
+					<p>Star Trader</p>
 				</div>
 
-				<div id='workspace' class='info'>
-					<p class='workspace_opt' onclick="start.startPage(tradeTablePage)">Товары в таблице</p>
-					<p class='workspace_opt' onclick="start.startPage(filterPage)">Фильтр маршрута</p>
-					<p onclick="start.startPage(mainPage)">Главная</p>
+				<div id='workspace'>
+					<svg id='homeIco' onclick="start.startPage(mainPage)" xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12">
+					  <path fill="none" stroke="currentColor" d="M2 11.5h2a.5.5 0 00.5-.5V8a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v3a.5.5 0 00.5.5h2a.5.5 0 00.5-.5V6.5h.389a.496.496 0 00.413-.838L6.422.681a.59.59 0 00-.844 0L.698 5.662a.496.496 0 00.413.838H1.5V11a.5.5 0 00.5.5z"/>
+					</svg>
+					<svg onclick='document.querySelector("#search_div").classList.toggle("search_divItsOpen")' id='homeSearch' width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+					 <g><title>background</title><rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/></g>
+					 <g>
+					  <title fill="#ffffff">Layer 1</title>
+					  <path fill="#ffffff" stroke="null" id="search" d="m20.064926,23.02924c-2.070441,1.475305 -4.603766,2.343065 -7.339761,2.343065c-6.993115,0 -12.662157,
+					  -5.669041 -12.662157,-12.662157c0,-6.993115 5.669041,-12.662157 12.662157,-12.662157c6.993115,0 12.662157,5.669041 12.662157,12.662157c0,2.735994 -0.86776,
+					  5.269319 -2.343065,7.339761l8.319484,8.319484c0.819614,0.819614 0.812776,2.131041 -0.000298,2.944115l-0.034918,0.034918c-0.811004,0.811004 -2.131205,
+					  0.813208 -2.944115,0.000298l-8.319484,-8.319484l0,0zm-7.339761,-0.636266c5.347676,0 9.682826,-4.33515 9.682826,-9.682826c0,-5.347676 -4.33515,-9.682826 -9.682826,
+					  -9.682826c-5.347676,0 -9.682826,4.33515 -9.682826,9.682826c0,5.347676 4.33515,9.682826 9.682826,9.682826l0,0z"/>
+					 </g>
+					</svg>
 				</div>
 
-				<div id='search_div'>
-					<input id='search' type='search' placeholder='Название торгового пункта или товара'></input>
-					<img id='search_icon' src='sys_img/search.png' width="20" height="20"/>
+				<div id='search_div' class='search_divItsOpen'>
+					<input id='search' type='search' placeholder='Поиск...'></input>
+					<svg onclick='document.querySelector("#search_div").classList.toggle("search_divItsOpen")' id='closeSearch' style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 13547 13547" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css">
+					   <![CDATA[
+					    .fil0 {fill:none}
+					    .fil1 {fill:black}
+					   ]]>
+					  </style></defs><g id="Ebene_x0020_1"><polygon class="fil0" points="0,0 13547,0 13547,13547 0,13547 "/><path class="fil1" d="M714 12832l12118 0 0 -12117 -12118 0 0 12117zm4188 -2990l1871 -1871 1871 1871 1197 -1197 -1871 -1871 1871 -1871 -1197 -1197 -1871 1871 -1871 -1871 -1197 1197 1871 1871 -1871 1871 1197 1197z"/></g></svg>
+					<svg id='search_icon' version="1.1" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+						<g fill="#000000" id="Core" transform="translate(-339.000000, -381.000000)">
+						<g id="search" transform="translate(339.000000, 381.000000)">
+						<path d="M12.5,11 L11.7,11 L11.4,10.7 C12.4,9.6 13,8.1 13,6.5 C13,2.9 10.1,0 6.5,0 C2.9,0 0,2.9 0,6.5 C0,10.1 2.9,
+						13 6.5,13 C8.1,13 9.6,12.4 10.7,11.4 L11,11.7 L11,12.5 L16,17.5 L17.5,16 L12.5,11 L12.5,11 Z M6.5,11 C4,11 2,9 2,
+						6.5 C2,4 4,2 6.5,2 C9,2 11,4 11,6.5 C11,9 9,11 6.5,11 L6.5,11 Z" id="Shape"/></g></g></g>
+					</svg>
 				</div>
 
 			</div>
@@ -43,11 +63,7 @@
 	<div id='start'>
 	</div>
 
-	<footer>
-	</footer>
 
-
-<script type="text/javascript" src="js/js750px.js"></script>
 <script type="text/javascript" src="js/start.js"></script>
 </body>
 </html>

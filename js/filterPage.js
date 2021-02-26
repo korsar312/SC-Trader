@@ -22,41 +22,39 @@ let filterPage = {
       start(){
             start.renderPageName('Фильтр товаров')
             let div = document.getElementById('content')
-            this.formData(universe, 'filtTrade')
-            this.formData(itemTrade, 'item')
             div.innerHTML = `
                   <div class='filterPage_but' поехали>
                         <button onclick='filterPage.toBeginFilter()' type="button" class='filterPage_formInput'>Поехали
                         </button>
                   </div>
-                  <form class='filterPage_formFilter'>
-                        <div class='filterPage_filter'>
-                        <p>Покупка товара на:</p>
-                              <select multiple="multiple" size='7' class='filterPage_formInput filterPage_Sell'>
-                                    ${this.filtTrade}
-                              </select>
-                        </div>
 
-                        <div class='filterPage_filter'>
-                        <p>Продажа товара на:</p>
-                              <select multiple="multiple" size='7' class='filterPage_formInput filterPage_Buy'>
-                                    ${this.filtTrade}
-                              </select>
-                        </div>
+                  <div class='filterPage_workspaces'>
+                        <form class='filterPage_formFilter'>Фильтр
+                              <div class='contextMenu_buttonBuy contextMenu_button'>
+                                    <div  class='contextMenu_nameButton' onclick='this.nextElementSibling.classList.toggle("contextMenu_buttonItsOpen")'>Покупка товара на: </div>
+                                    ${filterPage.innerContextMenu(universe)}
+                              </div>
 
-                        <div class='filterPage_filter'>
-                        <p>Товар</p>
-                              <select multiple="multiple" size='7' class='filterPage_formInput filterPage_Item'>
-                                    ${this.item}
-                              </select>
-                        </div>
+                              <div class='contextMenu_buttonSell contextMenu_button'>
+                                    <div class='contextMenu_nameButton' onclick='this.nextElementSibling.classList.toggle("contextMenu_buttonItsOpen")'>Продажа товара на: </div>
+                                    ${filterPage.innerContextMenu(universe)}
+                              </div>
 
-                        <div class='filterPage_filter'>
-                        <p>Свободное CSU</p>
-                              <input type="number" value='100' class='filterPage_formInput filterPage_scu'></input>
-                        </div>
+                              <div class='contextMenu_buttonItem contextMenu_button'>
+                                    <div class='contextMenu_nameButton' onclick='this.nextElementSibling.classList.toggle("contextMenu_buttonItsOpen")'>Товар: </div>
+                                    ${filterPage.innerContextMenu(itemTrade)}
+                              </div>
 
-                  </form>
+                              <div class='contextMenu_buttonSCU contextMenu_button'>
+                                    <div class='contextMenu_buttonSCUName'> Свободное CSU</div>
+                                    <input type="number" value='100' class='filterPage_scu'></input>
+                              </div>
+                        </form>
+                        <div class='filterPage_ProfitFilter'>Прибыль
+                        </div>
+                        <div class='filterPage_DetailFilter'>Детали
+                        </div>
+                  </div>
             `
 
       },
@@ -66,13 +64,21 @@ let filterPage = {
                   alert('введите значение денег и SCU больше 0')
                   return
             }
+
+            this.profit = []
+
             if (document.querySelector('.List')){
                   let k = document.querySelector('.List')
                   k.remove()
+
+                  if (document.querySelector('.filterPage_Detail')){
+                        k = document.querySelector('.filterPage_Detail')
+                        k.remove()
+                  }
             }
-            this.getformData('.filterPage_Sell',universe,'locatesTradeSell')
-            this.getformData('.filterPage_Buy',universe,'locatesTradeBuy')
-            this.getformData('.filterPage_Item',itemTrade,'items')
+            this.getformData('.contextMenu_buttonBuy',universe,'locatesTradeSell')
+            this.getformData('.contextMenu_buttonSell',universe,'locatesTradeBuy')
+            this.getformData('.contextMenu_buttonItem',itemTrade,'items')
             this.scu = document.body.querySelector('.filterPage_scu').value
 
             for (item in this.items){
@@ -84,19 +90,16 @@ let filterPage = {
             let renderProfitList = document.createElement('div')
             renderProfitList.className = 'List'
 
-            let listProfit = '<div>'
+            let listProfit = ''
 
             this.profit.sort((a,b)=>b.profit - a.profit)
 
             this.profit.forEach((item, i) => {
-                  listProfit += `<div class='filterPage_ProfitList'><span>Наименование товара: ${item.item}</span></div><div><div><span>Локация покупки: ${item.locatSell.name}</span></div><div><span>Цена покупки: ${item.priseSell}</span></div><span>Локация продажи: ${item.locatBuy.name}</span></div><div><span>Цена продажи: ${item.priseBuy}</span></div><div><span>Профит: ${item.profit}</span></div>`
+                  listProfit += `<div onclick='filterPage.getDetailForProfit(${i})' class='filterPage_ProfitList'>${item.profit}</div>`
             })
 
-            listProfit += '</div>'
-
             renderProfitList.innerHTML = listProfit
-            document.getElementById('content').append(renderProfitList)
-            this.profit = []
+            document.querySelector('.filterPage_ProfitFilter').append(renderProfitList)
       },
 //------------------------------------------------------------------------------
       getBestPrice(item,loc,sellOrBuy){
@@ -112,13 +115,13 @@ let filterPage = {
                               else{
                                     this.buyPrice = optimPrice;
                                     this.buyLoc = loc[locat]
-                                    this.profit.push({
-                                          item: item.name,
+                                    this.buyPrice-this.sellPrice <= 0 ? '' : this.profit.push({
+                                          item: item,
                                           locatBuy: this.buyLoc,
-                                          priseBuy: (this.buyPrice*100)*this.scu,
+                                          priseBuy: ((this.buyPrice*100)*this.scu).toFixed(2),
                                           locatSell: this.sellLoc,
-                                          priseSell: (this.sellPrice*100)*this.scu,
-                                          profit: Math.round(((this.buyPrice-this.sellPrice)*100)*this.scu),
+                                          priseSell: ((this.sellPrice*100)*this.scu).toFixed(2),
+                                          profit: (((this.buyPrice-this.sellPrice)*100)*this.scu).toFixed(2),
                                     })
                               }
                         }
@@ -128,20 +131,14 @@ let filterPage = {
             }
       },
 //------------------------------------------------------------------------------
-      formData(elem, n){
-            for(i in elem){
-                  this[n] += `<option data-name='${i}'>${elem[i].name}</option>`
-            }
-      },
-//------------------------------------------------------------------------------
       getformData(elem, n, vari){
-            let j = document.body.querySelector(elem)
+            let j = document.body.querySelector(elem).querySelectorAll('.contextMenu_choice')
             let tempArr = []
             let tempLoc = []
 
-            for(let z=0; z<j.options.length; z++){
-                  if(j.options[z].selected){
-                        tempArr.push(n[j.options[z].getAttribute('data-name')])
+            for(let z=0; z<j.length; z++){
+                  if(j[z].checked){
+                        tempArr.push(n[j[z].getAttribute('name')])
                   }
             }
 
@@ -177,5 +174,101 @@ let filterPage = {
             }
             this[vari] = tempLoc
       },
+//------------------------------------------------------------------------------
+      innerContextMenu(arg){
+      	let parrentArr = []
+
+      	for(i in arg){arg[i].parrent ? '' : parrentArr.push(arg[i])}
+
+      	let context =`<div class='contextMenu_innerContext'>`
+      	let iterat = -10
+      	let set = new Set()
+
+      	parrentArr.forEach(i=>{
+      		revers(i)
+      		function revers(elem){
+      			if(elem.child){
+      				elem.child.forEach(b=>{
+      					iterat += 10
+      					if(!set.has(elem.name)){
+      						context += `
+      							<div>
+      								<input class='contextMenu_choice' type='checkbox' style='margin-left: ${iterat}px' name='${elem.id}'>
+      								<label for='${elem.id}'>
+      									${elem.name}
+      								</label>
+      							</div>
+      						`
+      						}
+      					set.add(elem.name)
+      					revers(arg[b])
+      					iterat -= 10
+      				})
+      			}
+      			else{
+      				iterat += 10
+      				context += `
+            				<div>
+            					<input class='contextMenu_choice' type='checkbox' style='margin-left: ${iterat}px' name='${elem.id}'>
+            					<label for='${elem.id}'>
+            						${elem.name}
+            					</label>
+            				</div>
+      				`
+      				iterat -= 10
+      			}
+      		}
+      	})
+            context += `</div>`
+      	return context
+      },
+//------------------------------------------------------------------------------
+      getDetailForProfit(i){
+            if (document.querySelector('.filterPage_Detail')){
+                  let k = document.querySelector('.filterPage_Detail')
+                  k.remove()
+            }
+            let j = document.body.querySelector('.filterPage_DetailFilter')
+            let obj = this.profit[i]
+            let content = `
+                  <div class='filterPage_DetailItem filterPage_DetailList'>
+                        <div>Товар:</div>
+                        <div>${obj.item.name}</div>
+                  </div>
+
+                  <div>
+                        <div class='filterPage_DetailLocBuy filterPage_DetailList'>
+                              <div>Место покупки:</div>
+                              <div>${obj.locatBuy.name}</div>
+                        </div>
+
+                        <div class='filterPage_DetailBuyPrice filterPage_DetailList'>
+                              <div>Цена покупки:</div>
+                              <div>${obj.priseBuy}</div>
+                        </div>
+                  </div>
+
+                  <div>
+                        <div class='filterPage_DetailLocSell filterPage_DetailList'>
+                              <div>Место продажи:</div>
+                              <div>${obj.locatSell.name}</div>
+                        </div>
+
+                        <div class='filterPage_DetailSellPrice filterPage_DetailList'>
+                              <div>Цена продажи:</div>
+                              <div>${obj.priseSell}</div>
+                        </div>
+                  </div>
+
+                  <div class='filterPage_DetailProfit'>
+                        <div>Прибыль:</div>
+                        <div>${obj.profit}</div>
+                  </div>
+            `
+            let renderDetaleList = document.createElement('div')
+            renderDetaleList.className = 'filterPage_Detail'
+            renderDetaleList.innerHTML = content
+            j.append(renderDetaleList)
+      }
 //------------------------------------------------------------------------------
 }

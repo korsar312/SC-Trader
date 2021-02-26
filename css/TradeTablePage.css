@@ -29,4 +29,6 @@
 }
 .name{
 	margin: 15px;
+      height: calc(100% - 75px);
+      overflow: hidden;
 }
