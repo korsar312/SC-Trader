@@ -3,8 +3,6 @@ let mainPage = {
       setPages: [tableItem={name: 'Товары', description: 'Все товары оформлены в виде таблицы. Используется для заполнения цены', option: 'tableItem',func: 'tradeTablePage',},
                  filterItem={name: 'Фильтр', description: 'Используется для составления маршрута купли-продажи', option: 'filterItem',func: 'filterPage',},
                  station={name: 'Локации', description: 'Просмотр всех локаций доступных в игре', option: 'station',func: '',},
-                 guides={name: 'Гайды', description: 'Просмотр и создание гайдов по игре', option: 'guides',func: '',},
-                 hz={name: 'хз', description: 'еще не придумал', option: 'hz',func: '',},
                 ],
       interval: null,
       tempKostil: true,
@@ -46,8 +44,8 @@ let mainPage = {
                         let shift = parseInt(decorateShift.style.marginLeft) + -((this.coordinates - n)*4) +'px';
                         decorateShift.style.marginLeft = shift
 
-                        if(parseInt(decorateShift.style.marginLeft)>3000){decorateShift.style.marginLeft='3000px'}
-                        else if(parseInt(decorateShift.style.marginLeft)<-3000){decorateShift.style.marginLeft='-3000px'}
+                        if(parseInt(decorateShift.style.marginLeft)>1500){decorateShift.style.marginLeft='1500px'}
+                        else if(parseInt(decorateShift.style.marginLeft)<-1500){decorateShift.style.marginLeft='-1500px'}
 
                         this.coordinates = n;
                         this.tempKostil = true;
